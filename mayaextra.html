@@ -32,12 +32,11 @@
                             <ul>
                                 <li>Please enter secret code from game box or email.</li>
                                 <li>โปรดระบุรหัสลับ (Secret Code) ที่ปรากฏในกล่องเกมหรืออีเมล</li>
-                                <li style="color:red;">Coming Soon... (21/02/2024 - 19:00 GMT+7)</li>
                             </ul>
-                            <input class="form-control form-control-lg" id="secretcode" type="text" placeholder="Enter Secret Code..." disabled>
+                            <input class="form-control form-control-lg" id="secretcode" type="text" placeholder="Enter Secret Code...">
                         </div>
                         <div class="mb-3"> 
-                        <a href="download/refragment01/mayaextra/patch2.rpa" onclick="javascript:return validatePassword()"><button class="btn btn-success w-100" disabled>Download</button> </a>
+                        <button class="btn btn-success w-100" onclick="validatePassword()">Download</button> 
                         </div>
                         <hr class="dashed">
                         <b>Installation Guide: </b>Copy "patch2.rpy" file into "C:\Program Files (x86)\Steam\steamapps\common\ReFragment ~Absolute Ambition~\game"</p>
@@ -65,12 +64,11 @@
             secretCodeInput.value = secretCodeInput.value.toUpperCase();
             
             if (secretCodeInput.value === "M4Y4D415UK1") {
-                return true;
+                window.location.href = "download/refragment01/mayaextra/patch2.rpa";
             } else {
                 alert("Incorrect Secret Code / รหัสลับไม่ถูกต้อง");
-                return false;
             }
         }
-        </script>
+    </script>
 </body>
 </html>
