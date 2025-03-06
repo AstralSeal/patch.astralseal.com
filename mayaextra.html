@@ -9,6 +9,58 @@
         hr.dashed {
             border-top: 3px dashed #bbb;
         }
+        @media (max-width: 768px) {
+            .nav-pills {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.5rem;
+            }
+            .nav-item {
+                margin: 0.25rem;
+            }
+            .card {
+                margin: 1rem;
+                padding: 1rem !important;
+            }
+            .card-title {
+                font-size: 1.2rem;
+            }
+            .card-img-left {
+                max-height: 200px;
+                object-fit: cover;
+            }
+            .form-control {
+                font-size: 1rem;
+            }
+            .btn {
+                font-size: 1rem;
+                padding: 0.5rem 1rem;
+            }
+            ul {
+                font-size: 0.9rem;
+            }
+        }
+        @media (max-width: 576px) {
+            .card {
+                margin: 0.5rem;
+                padding: 0.75rem !important;
+            }
+            .card-title {
+                font-size: 1.1rem;
+            }
+            .form-control {
+                font-size: 0.9rem;
+            }
+            ul {
+                font-size: 0.8rem;
+            }
+            .alert {
+                font-size: 0.8rem;
+            }
+        }
+        .back-link {
+            margin: 2rem 0;
+        }
     </style>
 </head>
 <header class="d-flex justify-content-center py-3">
@@ -42,7 +94,7 @@
                         <b>Installation Guide: </b>Copy "patch2.rpa" file into "C:\Program Files (x86)\Steam\steamapps\common\ReFragment ~Absolute Ambition~\game"</p>
                     </div>
                 </div>
-                <div class="text-center">
+                <div class="text-center back-link">
                 <a href="https://patch.astralseal.com">Go back to Patch page</a>
                 </div>
             </div>
