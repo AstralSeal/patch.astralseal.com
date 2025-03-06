@@ -9,6 +9,16 @@
         hr.dashed {
             border-top: 3px dashed #bbb;
         }
+        .form-control.error {
+            border-color: #dc3545;
+            background-color: #fff;
+        }
+        .error-message {
+            color: #dc3545;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
         @media (max-width: 768px) {
             .nav-pills {
                 flex-wrap: wrap;
@@ -91,6 +101,9 @@
                                 <li>Please enter secret code from your game box or email.</li>
                             </ul>
                             <input class="form-control form-control-lg" id="secretcode" type="text" placeholder="Enter Secret Code...">
+                            <div class="error-message" id="secretcode-error">
+                                Incorrect Secret Code / รหัสลับไม่ถูกต้อง
+                            </div>
                         </div>
                         <div class="mb-3"> 
                         <button class="btn btn-success w-100" onclick="validatePassword()">Download</button> 
@@ -142,19 +155,29 @@
         */
         function validatePassword() {
             const secretCodeInput = document.getElementById("secretcode");
+            const errorMessage = document.getElementById("secretcode-error");
             secretCodeInput.value = secretCodeInput.value.toUpperCase();
             
             if (secretCodeInput.value === "M4Y4D415UK1") {
+                secretCodeInput.classList.remove("error");
+                errorMessage.style.display = "none";
                 const successToast = new bootstrap.Toast(document.getElementById("successToast"));
                 successToast.show();
                 setTimeout(() => {
                     window.location.href = "download/refragment01/mayaextra/patch2.rpa";
                 }, 1500);
             } else {
+                secretCodeInput.classList.add("error");
+                errorMessage.style.display = "block";
                 const errorToast = new bootstrap.Toast(document.getElementById("errorToast"));
                 errorToast.show();
             }
         }
+
+        document.getElementById("secretcode").addEventListener("input", function() {
+            this.classList.remove("error");
+            document.getElementById("secretcode-error").style.display = "none";
+        });
     </script>
 </body>
 </html>
