@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/yuno_patch/YUN03Y4NG3L",
+      "destination": "/yuno_patch/YUN03Y4NG3L/yunopatch.html",
+      "permanent": false
+    },
+    {
+      "source": "/yuno_patch/(.*)",
+      "destination": "/notfound.html",
+      "permanent": false
+    }
+  ]
+}
