@@ -6,7 +6,7 @@
       "permanent": false
     },
     {
-      "source": "/yuno_patch/(.*)",
+      "source": "/yuno_patch/:path*",
       "destination": "/notfound.html",
       "permanent": false
     }
