@@ -5,6 +5,11 @@
       "destination": "/yuno_320/yunovalidpatch.html",
       "permanent": false
     },
+     {
+      "source": "/yuno_patch/YUNO3Y4NG3L",
+      "destination": "/yuno_320/yunovalidpatch.html",
+      "permanent": false
+    },
     {
       "source": "/yuno_patch/:path*",
       "destination": "/notfound.html",
