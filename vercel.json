@@ -10,6 +10,16 @@
       "destination": "/yuno_320/yunovalidpatch.html",
       "permanent": false
     },
+     {
+      "source": "/yuno_patch/YUN03Y4NG31",
+      "destination": "/yuno_320/yunovalidpatch.html",
+      "permanent": false
+    },
+     {
+      "source": "/yuno_patch/YUNO3Y4NG31",
+      "destination": "/yuno_320/yunovalidpatch.html",
+      "permanent": false
+    },
     {
       "source": "/yuno_patch/:path*",
       "destination": "/notfound.html",
